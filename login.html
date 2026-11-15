@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome Back | Wood &amp; Grain Studio</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="auth-body">
+
+  <!-- RTL & Theme controls outside the card at the top right corner -->
+  <div class="auth-corner-tools">
+    <button class="iconbtn" data-rtl-toggle aria-label="Toggle RTL" title="Toggle RTL">⇄</button>
+    <button class="iconbtn" data-theme-toggle aria-label="Toggle theme" title="Toggle theme">◐</button>
+  </div>
+
+  <!-- Centered Authentication Card Container -->
+  <div class="auth-card-container">
+    <div class="auth-card">
+
+      <!-- Brand name inside the card, aligned to center -->
+      <div class="card-brand">
+        <a class="brand" href="index.html">
+          <span class="brandmark">✦</span>
+          <span>WOOD &amp; GRAIN STUDIO</span>
+        </a>
+      </div>
+
+      <div class="auth-heading">
+        <span class="eyebrow">Client Portal</span>
+        <h2>Welcome Back</h2>
+        <p>Access your commission briefs, carving progress and invoices.</p>
+      </div>
+
+      <form data-demo-form>
+        <div class="field">
+          <label>Email address</label>
+          <input type="email" required placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" required minlength="6" placeholder="Enter your password">
+        </div>
+        <div class="auth-options">
+          <div class="field-checkbox">
+            <input type="checkbox" id="terms-login" required>
+            <label for="terms-login">I agree to the <a href="#" data-terms-trigger style="color:var(--brand);text-decoration:underline">Terms &amp; Conditions</a></label>
+          </div>
+          <a href="#" style="color:var(--brand);font-size:.85rem;font-weight:500">Forgot password?</a>
+        </div>
+        <button class="btn" style="width:100%" type="submit">Sign in ↗</button>
+      </form>
+
+      <!-- Centered Social Icons with NO repetition -->
+      <div class="auth-divider"><span>OR CONTINUE WITH</span></div>
+      <div class="auth-socials">
+        <a href="#" class="auth-social-btn" aria-label="Sign in with Instagram">
+          <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
+        </a>
+        <a href="#" class="auth-social-btn" aria-label="Sign in with Facebook">
+          <svg viewBox="0 0 24 24"><path d="M13.5 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.7 1.8-1.7H17V2.5c-.7-.1-1.7-.2-2.8-.2-2.8 0-4.7 1.7-4.7 4.9v2.3H6.4V13h3.1v9z"/></svg>
+        </a>
+        <a href="#" class="auth-social-btn" aria-label="Sign in with Pinterest">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.6 19.3c0-.8 0-1.8.2-2.7l1.3-5.4s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.8 0 1.2.6 1.2 1.4 0 .9-.6 2.2-.9 3.5-.3 1 .5 1.9 1.5 1.9 1.8 0 3.2-2.4 3.2-5.2 0-2.1-1.4-3.7-4-3.7-2.9 0-4.7 2.2-4.7 4.6 0 .8.2 1.4.6 1.9.2.2.2.3.1.6l-.2.8c-.1.3-.3.4-.6.3-1.3-.5-1.9-1.9-1.9-3.5 0-2.6 2.2-5.8 6.7-5.8 3.6 0 6 2.6 6 5.4 0 3.7-2.1 6.5-5.2 6.5-1 0-2-.6-2.4-1.2l-.7 2.8c-.2 1-.8 1.9-1.2 2.6A10 10 0 1 0 12 2z"/></svg>
+        </a>
+      </div>
+
+      <div class="auth-links">
+        New to the studio? <a href="signup.html" style="color:var(--brand);font-weight:700">Create an account</a>
+      </div>
+
+      <div class="auth-back-link">
+        <a href="index.html">← Return to studio website</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
