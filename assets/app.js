@@ -30,14 +30,56 @@ document.querySelectorAll('[data-rtl-toggle]').forEach(btn => {
   });
 });
 
-// Mobile Navigation Toggle
+// Mobile Navigation Toggle & Close Handlers
+const nav = document.querySelector('.navlinks');
+const menuToggle = document.querySelector('[data-menu-toggle]');
+
+function closeMenu() {
+  if (nav && nav.classList.contains('open')) {
+    nav.classList.remove('open');
+    if (menuToggle) {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.innerHTML = '☰';
+      menuToggle.setAttribute('aria-label', 'Open menu');
+    }
+  }
+}
+
+function openMenu() {
+  if (nav) {
+    nav.classList.add('open');
+    if (menuToggle) {
+      menuToggle.setAttribute('aria-expanded', 'true');
+      menuToggle.innerHTML = '✕';
+      menuToggle.setAttribute('aria-label', 'Close menu');
+    }
+  }
+}
+
 document.querySelectorAll('[data-menu-toggle]').forEach(btn => {
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
-    const nav = document.querySelector('.navlinks');
-    if (nav) {
-      const isOpen = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', isOpen);
+    if (nav && nav.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+});
+
+// Dedicated close button inside mobile drawer
+document.querySelectorAll('[data-menu-close]').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeMenu();
+  });
+});
+
+// Close menu when clicking navigation links on mobile
+document.querySelectorAll('.navlinks a:not(.btn)').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 920) {
+      closeMenu();
     }
   });
 });
@@ -45,16 +87,14 @@ document.querySelectorAll('[data-menu-toggle]').forEach(btn => {
 // Close mobile menu on resize to desktop
 window.addEventListener('resize', () => {
   if (window.innerWidth > 920) {
-    document.querySelector('.navlinks')?.classList.remove('open');
+    closeMenu();
   }
 });
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
-  const nav = document.querySelector('.navlinks');
-  const toggle = document.querySelector('[data-menu-toggle]');
-  if (nav && nav.classList.contains('open') && !nav.contains(e.target) && !toggle?.contains(e.target)) {
-    nav.classList.remove('open');
+  if (nav && nav.classList.contains('open') && !nav.contains(e.target) && !menuToggle?.contains(e.target)) {
+    closeMenu();
   }
 });
 

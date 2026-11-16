@@ -25,6 +25,10 @@
         <span>WOOD &amp; GRAIN STUDIO</span>
       </a>
       <nav class="navlinks" id="main-nav">
+        <div class="mobile-drawer-header">
+          <span class="mobile-drawer-title">Navigation</span>
+          <button type="button" class="mobile-drawer-close" data-menu-close aria-label="Close menu" title="Close menu">✕</button>
+        </div>
         <a href="index.html">Home1</a>
         <a class="active" href="home2.html">Home2</a>
         <a href="about.html">About</a>
@@ -50,15 +54,36 @@
   </header>
 
   <main>
-    <!-- Home 2 Hero: Design Similar to Home 1 (Issue 4) -->
-    <section class="hero hero-home2">
+    <!-- Modern Split Hero for Home 2 -->
+    <section class="hero-split">
       <div class="container">
-        <span class="eyebrow">A different view of the craft</span>
-        <h1>Quiet detail.<br>Lasting presence.</h1>
-        <p>Woodcraft that brings warmth, hand-carved texture and deep heirloom meaning into everyday life.</p>
-        <div class="hero-actions">
-          <a class="btn" href="products.html">View products ↗</a>
-          <a class="btn outline" href="contact.html">Commission a piece</a>
+        <div class="hero-split-grid">
+          <div class="hero-split-copy">
+            <span class="eyebrow">A different view of the craft</span>
+            <h1>Quiet detail.<br>Lasting presence.</h1>
+            <p>Woodcraft that brings warmth, hand-carved texture and deep heirloom meaning into everyday life. Each piece is chiseled slowly from certified timber to become an architectural heirloom.</p>
+            <div class="hero-split-actions">
+              <a class="btn" href="products.html">View products ↗</a>
+              <a class="btn outline" href="contact.html">Commission a piece</a>
+            </div>
+            <div class="hero-split-hallmarks">
+              <div class="hallmark-item">
+                <span class="hallmark-icon">✧</span>
+                <span>100% Certified Hardwoods</span>
+              </div>
+              <div class="hallmark-item">
+                <span class="hallmark-icon">⌁</span>
+                <span>Hand-Chiseled by Master Artisans</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-split-img">
+            <img src="https://images.unsplash.com/photo-1455297463052-94abc38ba022?auto=format&fit=crop&w=1200&q=85" alt="Master artisan chiseling sculptural curves into solid hardwood block">
+            <div class="hero-img-badge">
+              <span class="badge-dot"></span>
+              <span>Hand-chiseled in Chennai Studio</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -71,7 +96,7 @@
           <h2 class="heading-single-line">Slow craft for a considered world.</h2>
           <p>We believe the best objects are made with intention: responsibly sourced timber, thoughtful design and the patience to get every curve right.</p>
         </div>
-        <div class="grid three">
+        <div class="grid three home-cards-2x1">
           <div class="philosophy-card">
             <div class="service-icon">⌁</div>
             <h3>Material first</h3>
