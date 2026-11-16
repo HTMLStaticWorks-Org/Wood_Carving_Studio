@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="Wood & Grain Studio — hand-carved wood products, architectural relief panels, sculptures and heirloom wooden art.">
+  <meta name="description" content="Wood & Grain Studio — hand-carved wood products, architectural reliefs, and heirloom sculptures.">
   <title>Products | Wood &amp; Grain Studio</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
@@ -28,9 +27,14 @@
       <nav class="navlinks" id="main-nav">
         <a href="index.html">Home1</a>
         <a href="home2.html">Home2</a>
+        <a href="about.html">About</a>
         <a href="gallery.html">Gallery</a>
         <a class="active" href="products.html">Products</a>
+        <a href="custom.html">Custom</a>
         <a href="contact.html">Contact</a>
+        <div class="mobile-signin-wrap">
+          <a class="btn btn-sm" href="login.html">Sign in</a>
+        </div>
       </nav>
       <div class="navtools">
         <button class="iconbtn" data-rtl-toggle aria-label="Toggle RTL" title="Toggle RTL">⇄</button>
@@ -45,46 +49,50 @@
     <section class="page-hero hero-products">
       <div class="container">
         <span class="eyebrow">Studio Collection</span>
-        <h1>Handcrafted Wood Carvings &amp; Objects</h1>
-        <p>Each piece is individually carved by master artisans from sustainable solid hardwoods. Available for purchase
-          or bespoke commission tailored to your dimensions.</p>
+        <h1>Handcrafted Wood Carvings.</h1>
+        <p>Explore our limited-run wood carvings, sculpted panels and functional wooden art pieces made in our Chennai studio.</p>
         <div class="page-hero-actions">
-          <a class="btn" href="#catalog">Browse collection <span>↓</span></a>
-          <a class="btn outline" href="contact.html">Request custom size</a>
+          <a class="btn" href="#catalog">View collection ↗</a>
+          <a class="btn outline" href="custom.html">Custom dimension brief</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="catalog">
+    <!-- Filter Pills -->
+    <section class="section" id="catalog" style="padding-bottom:16px">
       <div class="container">
         <div class="section-head center">
-          <span class="eyebrow">Original carvings</span>
-          <h2>Artisan Wood Carving Catalog</h2>
-          <p>Filter by discipline or browse our current studio stock and made-to-order carving designs.</p>
+          <span class="eyebrow">Artisan Catalog</span>
+          <h2>Carved with Intention</h2>
+          <p>Filter our works by discipline or browse all available hand-carved pieces below.</p>
         </div>
-
         <div class="filter-pills">
-          <button class="pill-btn active" data-filter="all">All Carvings</button>
-          <button class="pill-btn" data-filter="architectural">Architectural Reliefs</button>
-          <button class="pill-btn" data-filter="sculpture">Sculptures &amp; Totems</button>
-          <button class="pill-btn" data-filter="heirloom">Heirloom Keepsakes</button>
+          <button class="filter-pill active" data-filter="all">All Carvings</button>
+          <button class="filter-pill" data-filter="architectural">Architectural Panels</button>
+          <button class="filter-pill" data-filter="sculpture">Sculptures</button>
+          <button class="filter-pill" data-filter="heirloom">Heirlooms &amp; Vessels</button>
         </div>
+      </div>
+    </section>
 
-        <div class="grid three">
+    <!-- Products Grid -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="grid three" id="product-grid">
+
           <!-- Product 1 -->
           <article class="card" data-category="architectural">
             <div class="card-img-wrap">
               <img src="https://images.unsplash.com/photo-1732544504373-01e2f4a6493f?auto=format&fit=crop&w=800&q=80"
-                alt="Acanto architectural relief wood carving panel" loading="lazy">
+                alt="Intricate dark teakwood carved relief panel" loading="lazy">
             </div>
             <div class="card-body">
               <div class="card-meta">
                 <span class="card-badge">Architectural</span>
                 <span class="card-wood-tag">Burma Teak</span>
               </div>
-              <h3>Acanto Wall Carving Frieze</h3>
-              <p>Deep relief botanical scrollwork hand-chiseled from a single aged slab of teak. Hand-buffed with
-                antique beeswax.</p>
+              <h3>Acanto Architectural Wall Panel</h3>
+              <p>Hand-chiseled relief with classical acanthus scrollwork and floral rosettes. Natural beeswax finish that highlights the timber rays.</p>
               <div class="card-footer">
                 <span class="card-price">$480</span>
                 <a class="btn btn-sm" href="contact.html">Inquire / Order ↗</a>
@@ -96,16 +104,15 @@
           <article class="card" data-category="architectural">
             <div class="card-img-wrap">
               <img src="https://images.unsplash.com/photo-1752934545888-6f12a494afa8?auto=format&fit=crop&w=800&q=80"
-                alt="Mandala fretwork wood carving screen" loading="lazy">
+                alt="Rosewood mandala fretwork carving" loading="lazy">
             </div>
             <div class="card-body">
               <div class="card-meta">
                 <span class="card-badge">Architectural</span>
                 <span class="card-wood-tag">Indian Rosewood</span>
               </div>
-              <h3>Mandala Filigree Carved Screen</h3>
-              <p>Meticulous open-pierced fretwork and relief lotus petals carved from dense rosewood. Ideal as a
-                decorative partition or wall art.</p>
+              <h3>Mandala Fretwork Jali Screen</h3>
+              <p>Pierced lattice screen chiseled with intricate geometric florals. Casts captivating shadow patterns in living and meditation spaces.</p>
               <div class="card-footer">
                 <span class="card-price">$620</span>
                 <a class="btn btn-sm" href="contact.html">Inquire / Order ↗</a>
@@ -117,16 +124,15 @@
           <article class="card" data-category="sculpture">
             <div class="card-img-wrap">
               <img src="https://images.unsplash.com/photo-1669687769369-383d3d562445?auto=format&fit=crop&w=800&q=80"
-                alt="Imperial mythic wood carved dragon sculpture" loading="lazy">
+                alt="Solid walnut dragon sculpture carving" loading="lazy">
             </div>
             <div class="card-body">
               <div class="card-meta">
                 <span class="card-badge">Sculpture</span>
-                <span class="card-wood-tag">Black Walnut</span>
+                <span class="card-wood-tag">American Walnut</span>
               </div>
-              <h3>Imperial Mythic Dragon Statue</h3>
-              <p>Solid walnut sculpture with dynamic scales, expressive eyes and flowing whiskers. Multi-stage hand
-                polishing brings out warm undertones.</p>
+              <h3>Mythic Dragon High-Relief Carving</h3>
+              <p>Intricately scaled high-relief carving capturing fluid muscular tension. Carved from a single aged walnut block over 45 hours.</p>
               <div class="card-footer">
                 <span class="card-price">$790</span>
                 <a class="btn btn-sm" href="contact.html">Inquire / Order ↗</a>
@@ -138,18 +144,17 @@
           <article class="card" data-category="sculpture">
             <div class="card-img-wrap">
               <img src="https://images.unsplash.com/photo-1649446327151-b633306be0a5?auto=format&fit=crop&w=800&q=80"
-                alt="Ancestral guardian hand-carved wood mask" loading="lazy">
+                alt="Hand-carved ceremonial wooden mask" loading="lazy">
             </div>
             <div class="card-body">
               <div class="card-meta">
                 <span class="card-badge">Sculpture</span>
-                <span class="card-wood-tag">Wild Olive &amp; Ebony</span>
+                <span class="card-wood-tag">Wild Olive</span>
               </div>
-              <h3>Ancestral Guardian Wood Mask</h3>
-              <p>Expressive wall sculpture featuring chiseled tribal features, natural contrasting sapwood and
-                hand-buffed protective oil finish.</p>
+              <h3>Ancestral Spirit Guardian Mask</h3>
+              <p>Ceremonial mask carving inspired by classical tribal forms. Features expressive chiseled contours and a charred yakisugi wood patina.</p>
               <div class="card-footer">
-                <span class="card-price">$390</span>
+                <span class="card-price">$520</span>
                 <a class="btn btn-sm" href="contact.html">Inquire / Order ↗</a>
               </div>
             </div>
@@ -159,16 +164,15 @@
           <article class="card" data-category="heirloom">
             <div class="card-img-wrap">
               <img src="https://images.unsplash.com/photo-1719257727556-e68b4aa5582d?auto=format&fit=crop&w=800&q=80"
-                alt="Classical relief portrait cameo wood medallion" loading="lazy">
+                alt="Handmade carved wood cameo portrait medallion" loading="lazy">
             </div>
             <div class="card-body">
               <div class="card-meta">
                 <span class="card-badge">Heirloom</span>
-                <span class="card-wood-tag">European Linden</span>
+                <span class="card-wood-tag">Linden Hardwood</span>
               </div>
-              <h3>Classical Cameo Portrait Plaque</h3>
-              <p>Delicate high-relief portrait medallion sculpted from premium close-grained linden hardwood. Can be
-                personalized with custom portraits.</p>
+              <h3>Classical Cameo Relief Plaque</h3>
+              <p>Delicate high-relief portrait medallion sculpted from premium close-grained linden hardwood. Can be personalized with custom portraits.</p>
               <div class="card-footer">
                 <span class="card-price">$340</span>
                 <a class="btn btn-sm" href="contact.html">Inquire / Order ↗</a>
@@ -188,8 +192,7 @@
                 <span class="card-wood-tag">Quarter-Sawn Oak</span>
               </div>
               <h3>Wild Flora Relief Border Frieze</h3>
-              <p>Continuous hand-carved acanthus and leaf motifs designed for fireplace mantels, lintels, door casings
-                and bespoke cabinetry.</p>
+              <p>Continuous hand-carved acanthus and leaf motifs designed for fireplace mantels, lintels, door casings and bespoke cabinetry.</p>
               <div class="card-footer">
                 <span class="card-price">$450</span>
                 <a class="btn btn-sm" href="contact.html">Inquire / Order ↗</a>
@@ -209,8 +212,7 @@
                 <span class="card-wood-tag">Wild Figured Cherry</span>
               </div>
               <h3>Hand-Chiseled Timber Vessel</h3>
-              <p>Gouged organic wooden bowl paired with matching carving spoon. Finished with organic food-safe walnut
-                oil and beeswax balm.</p>
+              <p>Gouged organic wooden bowl paired with matching carving spoon. Finished with organic food-safe walnut oil and beeswax balm.</p>
               <div class="card-footer">
                 <span class="card-price">$185</span>
                 <a class="btn btn-sm" href="contact.html">Inquire / Order ↗</a>
@@ -230,10 +232,29 @@
                 <span class="card-wood-tag">Aromatic Red Cedar</span>
               </div>
               <h3>Totem Spirit Sentinel Column</h3>
-              <p>Freestanding monumental column featuring stylized symbolic contours carved from a weathered cedar beam.
-                A commanding focal point.</p>
+              <p>Freestanding monumental column featuring stylized symbolic contours carved from a weathered cedar beam. A commanding focal point.</p>
               <div class="card-footer">
-                <span class="card-price">$1,250</span>
+                <span class="card-price">$980</span>
+                <a class="btn btn-sm" href="contact.html">Inquire / Order ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 9 -->
+          <article class="card" data-category="architectural">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1763771075028-5b84cbd5627b?auto=format&fit=crop&w=800&q=80"
+                alt="Hand-carved floral rosette medallion" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-badge">Architectural</span>
+                <span class="card-wood-tag">Burma Teak</span>
+              </div>
+              <h3>Heritage Ceiling Rosette Medallion</h3>
+              <p>Circular carved floral medallion with central lotus boss, suitable for lighting surrounds or standalone architectural wall display.</p>
+              <div class="card-footer">
+                <span class="card-price">$310</span>
                 <a class="btn btn-sm" href="contact.html">Inquire / Order ↗</a>
               </div>
             </div>
@@ -242,20 +263,19 @@
       </div>
     </section>
 
+    <!-- Split Section with Left-Aligned Buttons and Reduced Image Height (Issue 9) -->
     <section class="section stats">
       <div class="container split">
         <div>
           <span class="eyebrow">Studio Craftsmanship</span>
           <h2>Commissions &amp; Tailored Dimensions</h2>
-          <p>Every piece in our catalog can be modified to fit your spatial requirements. Choose your preferred hardwood
-            species—Teak, Walnut, Rosewood, Mahogany or Oak—and collaborate directly with our carvers on scale and
-            relief depth.</p>
-          <div class="hero-actions">
-            <a class="btn" href="contact.html">Start a custom brief ↗</a>
+          <p>Every piece in our catalog can be modified to fit your spatial requirements. Choose your preferred hardwood species—Teak, Walnut, Rosewood, Mahogany or Oak—and collaborate directly with our carvers on scale and relief depth.</p>
+          <div class="left-aligned-actions">
+            <a class="btn" href="custom.html">Start a custom brief ↗</a>
             <a class="btn outline" href="gallery.html">View portfolio</a>
           </div>
         </div>
-        <div class="photo">
+        <div class="photo photo-reduced">
           <img src="https://images.unsplash.com/photo-1659058089895-ed56295d52dd?auto=format&fit=crop&w=1100&q=85"
             alt="Monumental hand-carved cedar wood totem sculpture">
         </div>
@@ -284,34 +304,26 @@
             <span class="brandmark">✦</span>
             <span>WOOD &amp; GRAIN STUDIO</span>
           </a>
-          <p style="margin-top:18px">Thoughtful woodcraft, carved by hand and shaped by stories. We create heirloom
-            pieces for homes, spaces and meaningful moments.</p>
+          <p style="margin-top:18px">Thoughtful woodcraft, carved by hand and shaped by stories. We create heirloom pieces for homes, spaces and meaningful moments.</p>
           <div class="socials">
-            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24">
-                <path
-                  d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z" />
-              </svg></a>
-            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24">
-                <path
-                  d="M13.5 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.7 1.8-1.7H17V2.5c-.7-.1-1.7-.2-2.8-.2-2.8 0-4.7 1.7-4.7 4.9v2.3H6.4V13h3.1v9z" />
-              </svg></a>
-            <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24">
-                <path
-                  d="M12 2a10 10 0 0 0-3.6 19.3c0-.8 0-1.8.2-2.7l1.3-5.4s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.8 0 1.2.6 1.2 1.4 0 .9-.6 2.2-.9 3.5-.3 1 .5 1.9 1.5 1.9 1.8 0 3.2-2.4 3.2-5.2 0-2.1-1.4-3.7-4-3.7-2.9 0-4.7 2.2-4.7 4.6 0 .8.2 1.4.6 1.9.2.2.2.3.1.6l-.2.8c-.1.3-.3.4-.6.3-1.3-.5-1.9-1.9-1.9-3.5 0-2.6 2.2-5.8 6.7-5.8 3.6 0 6 2.6 6 5.4 0 3.7-2.1 6.5-5.2 6.5-1 0-2-.6-2.4-1.2l-.7 2.8c-.2 1-.8 1.9-1.2 2.6A10 10 0 1 0 12 2z" />
-              </svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.7 1.8-1.7H17V2.5c-.7-.1-1.7-.2-2.8-.2-2.8 0-4.7 1.7-4.7 4.9v2.3H6.4V13h3.1v9z"/></svg></a>
+            <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.6 19.3c0-.8 0-1.8.2-2.7l1.3-5.4s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.8 0 1.2.6 1.2 1.4 0 .9-.6 2.2-.9 3.5-.3 1 .5 1.9 1.5 1.9 1.8 0 3.2-2.4 3.2-5.2 0-2.1-1.4-3.7-4-3.7-2.9 0-4.7 2.2-4.7 4.6 0 .8.2 1.4.6 1.9.2.2.2.3.1.6l-.2.8c-.1.3-.3.4-.6.3-1.3-.5-1.9-1.9-1.9-3.5 0-2.6 2.2-5.8 6.7-5.8 3.6 0 6 2.6 6 5.4 0 3.7-2.1 6.5-5.2 6.5-1 0-2-.6-2.4-1.2l-.7 2.8c-.2 1-.8 1.9-1.2 2.6A10 10 0 1 0 12 2z"/></svg></a>
           </div>
         </div>
         <div>
           <h3>Explore</h3>
           <a href="index.html">Home1</a>
           <a href="home2.html">Home2</a>
+          <a href="about.html">About</a>
           <a href="gallery.html">Gallery</a>
           <a href="products.html">Products</a>
+          <a href="custom.html">Custom</a>
           <a href="contact.html">Contact</a>
         </div>
         <div>
           <h3>Our Studio</h3>
-          <a href="contact.html">Custom commissions</a>
+          <a href="custom.html">Custom commissions</a>
           <a href="products.html">Artisan collection</a>
           <a href="gallery.html">Recent work</a>
           <a href="login.html">Client account</a>
@@ -327,7 +339,9 @@
     </div>
   </footer>
 
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
   <script src="assets/app.js"></script>
 </body>
-
 </html>

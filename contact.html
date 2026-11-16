@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Wood & Grain Studio — artisan wood carving, sculpture and bespoke woodcraft.">
+  <meta name="description" content="Contact Wood & Grain Studio — bespoke wood carving commissions, architectural inquiries and studio visits in Chennai.">
   <title>Contact | Wood &amp; Grain Studio</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
@@ -25,9 +25,14 @@
       <nav class="navlinks" id="main-nav">
         <a href="index.html">Home1</a>
         <a href="home2.html">Home2</a>
+        <a href="about.html">About</a>
         <a href="gallery.html">Gallery</a>
         <a href="products.html">Products</a>
+        <a href="custom.html">Custom</a>
         <a class="active" href="contact.html">Contact</a>
+        <div class="mobile-signin-wrap">
+          <a class="btn btn-sm" href="login.html">Sign in</a>
+        </div>
       </nav>
       <div class="navtools">
         <button class="iconbtn" data-rtl-toggle aria-label="Toggle RTL" title="Toggle RTL">⇄</button>
@@ -44,10 +49,14 @@
         <span class="eyebrow">We’d love to hear from you</span>
         <h1>Let’s shape an idea.</h1>
         <p>Share your project, ask about wood carving commissions, or arrange a studio consultation in Chennai.</p>
+        <div class="page-hero-actions">
+          <a class="btn" href="#enquiry-form">Send an enquiry ↗</a>
+          <a class="btn outline" href="custom.html">Commission process</a>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="enquiry-form">
       <div class="container split">
         <div>
           <span class="eyebrow">Contact the studio</span>
@@ -55,7 +64,8 @@
           <p>Tell us what you’re imagining. A rough sketch, a reference photo, architectural blueprints or a few words are a perfect place to begin.</p>
 
           <div class="contact-list">
-            <div class="contact-item">
+            <!-- Compact Studio Location (Issue 10) -->
+            <div class="contact-item contact-item-location">
               <div class="service-icon">⌖</div>
               <div>
                 <strong>Studio location</strong>
@@ -85,6 +95,7 @@
             </div>
           </div>
 
+          <!-- Centered on 768px view (Issue 19) -->
           <div class="contact-social-wrap">
             <strong style="display:block;margin-bottom:8px;font-size:.9rem">Follow our carving process</strong>
             <div class="socials">
@@ -95,9 +106,10 @@
           </div>
         </div>
 
+        <!-- Form Heading changed to Studio Enquiry Form (Issue 11) -->
         <form class="form-card" data-demo-form>
           <span class="eyebrow">Studio Inquiries</span>
-          <h3 style="margin-bottom:8px">Send a project brief</h3>
+          <h3 style="margin-bottom:8px">Studio Enquiry Form</h3>
           <p>We review every commission request and respond within two working days.</p>
           <div class="field">
             <label>Your full name</label>
@@ -120,7 +132,51 @@
       </div>
     </section>
 
-    <section class="section" style="padding-top:0">
+    <!-- Interactive FAQ Section (Issue 12) -->
+    <section class="section" style="background:var(--surface)">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">Frequently Asked Questions</span>
+          <h2>Carving Commissions &amp; Studio Inquiries</h2>
+          <p>Everything you need to know about our commissioning process, hardwood timbers, timelines, and worldwide shipping.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-summary">What is the typical timeline for a custom wood carving?</summary>
+            <div class="faq-content">
+              Small to medium sculptural carvings and wall medallions typically require 2 to 4 weeks. Monumental architectural panels, fretwork screens, and complex multi-figure reliefs take 6 to 10 weeks depending on complexity, timber drying, and multiple coats of hand-buffed wax.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-summary">Which hardwood species do you recommend for indoor vs outdoor?</summary>
+            <div class="faq-content">
+              For outdoor and moisture-exposed areas, seasoned Burma Teak is ideal due to its natural silica and oils. For interior wall art and sculptures, American Walnut and Indian Rosewood (Sheesham) provide breathtaking color contrasts and intricate grain detail.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-summary">Can I approve the design sketches before carving begins?</summary>
+            <div class="faq-content">
+              Yes, absolutely. We begin with a 1:1 scale charcoal sketch and dimensional elevation. Carving only commences once you have reviewed and signed off on the sketch and chosen timber block.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-summary">How are delicate carvings packed for worldwide transit?</summary>
+            <div class="faq-content">
+              Each piece is wrapped in breathable archival tissue, cushioned inside high-density foam molds, and crated in custom reinforced plywood cases with moisture desiccants to ensure pristine worldwide arrival.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-summary">Can I visit the workshop in Chennai to see work in progress?</summary>
+            <div class="faq-content">
+              We welcome patrons and interior designers by appointment from Monday to Saturday. Please send us an enquiry or call in advance so our master carvers can guide you through the studio.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Find our neighbourhood</span>
@@ -151,13 +207,15 @@
           <h3>Explore</h3>
           <a href="index.html">Home1</a>
           <a href="home2.html">Home2</a>
+          <a href="about.html">About</a>
           <a href="gallery.html">Gallery</a>
           <a href="products.html">Products</a>
+          <a href="custom.html">Custom</a>
           <a href="contact.html">Contact</a>
         </div>
         <div>
           <h3>Our Studio</h3>
-          <a href="contact.html">Custom commissions</a>
+          <a href="custom.html">Custom commissions</a>
           <a href="products.html">Artisan collection</a>
           <a href="gallery.html">Recent work</a>
           <a href="login.html">Client account</a>
@@ -172,6 +230,9 @@
       <div class="copyright">© <span data-year></span> Wood &amp; Grain Studio. Crafted with care.</div>
     </div>
   </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
 
   <script src="assets/app.js"></script>
 </body>

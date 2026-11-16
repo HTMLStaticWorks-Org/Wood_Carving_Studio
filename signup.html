@@ -9,7 +9,7 @@
 </head>
 <body class="auth-body">
 
-  <!-- RTL & Theme controls outside the card at the top right corner -->
+  <!-- RTL & Theme controls outside the card at the top right corner (Issue 20) -->
   <div class="auth-corner-tools">
     <button class="iconbtn" data-rtl-toggle aria-label="Toggle RTL" title="Toggle RTL">⇄</button>
     <button class="iconbtn" data-theme-toggle aria-label="Toggle theme" title="Toggle theme">◐</button>
@@ -35,20 +35,36 @@
 
       <form data-demo-form>
         <div class="field">
-          <label>Full name</label>
-          <input required placeholder="Your full name">
+          <label for="fullname">Full name</label>
+          <input id="fullname" required placeholder="Your full name">
         </div>
         <div class="field">
-          <label>Email address</label>
-          <input type="email" required placeholder="you@example.com">
+          <label for="signup-email">Email address</label>
+          <input type="email" id="signup-email" required placeholder="you@example.com">
         </div>
         <div class="field">
-          <label>Password</label>
-          <input type="password" required minlength="6" placeholder="At least 6 characters">
+          <label for="signup-password">Password</label>
+          <div class="password-wrap">
+            <input type="password" id="signup-password" required minlength="6" placeholder="At least 6 characters">
+            <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
         </div>
         <div class="field">
-          <label>Confirm password</label>
-          <input type="password" required minlength="6" placeholder="Repeat your password">
+          <label for="confirm-password">Confirm password</label>
+          <div class="password-wrap">
+            <input type="password" id="confirm-password" required minlength="6" placeholder="Repeat your password">
+            <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
         </div>
         <div class="field-checkbox">
           <input type="checkbox" id="terms-signup" required>
@@ -57,17 +73,26 @@
         <button class="btn" style="width:100%" type="submit">Create account ↗</button>
       </form>
 
-      <!-- Centered Social Icons with NO repetition -->
+      <!-- Centered Social Auth Icons with crisp SVGs: Google, Apple, Facebook (Issue 14) -->
       <div class="auth-divider"><span>OR CONTINUE WITH</span></div>
       <div class="auth-socials">
-        <a href="#" class="auth-social-btn" aria-label="Sign up with Instagram">
-          <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
+        <a href="#" class="auth-social-btn" aria-label="Sign up with Google" title="Google">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
         </a>
-        <a href="#" class="auth-social-btn" aria-label="Sign up with Facebook">
-          <svg viewBox="0 0 24 24"><path d="M13.5 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.7 1.8-1.7H17V2.5c-.7-.1-1.7-.2-2.8-.2-2.8 0-4.7 1.7-4.7 4.9v2.3H6.4V13h3.1v9z"/></svg>
+        <a href="#" class="auth-social-btn" aria-label="Sign up with Apple" title="Apple">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.76 1.05-1.81.93-2.87-.91.04-2.02.61-2.66 1.36-.57.65-1.07 1.72-.94 2.76 1.02.08 2.05-.49 2.67-1.25z"/>
+          </svg>
         </a>
-        <a href="#" class="auth-social-btn" aria-label="Sign up with Pinterest">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.6 19.3c0-.8 0-1.8.2-2.7l1.3-5.4s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.8 0 1.2.6 1.2 1.4 0 .9-.6 2.2-.9 3.5-.3 1 .5 1.9 1.5 1.9 1.8 0 3.2-2.4 3.2-5.2 0-2.1-1.4-3.7-4-3.7-2.9 0-4.7 2.2-4.7 4.6 0 .8.2 1.4.6 1.9.2.2.2.3.1.6l-.2.8c-.1.3-.3.4-.6.3-1.3-.5-1.9-1.9-1.9-3.5 0-2.6 2.2-5.8 6.7-5.8 3.6 0 6 2.6 6 5.4 0 3.7-2.1 6.5-5.2 6.5-1 0-2-.6-2.4-1.2l-.7 2.8c-.2 1-.8 1.9-1.2 2.6A10 10 0 1 0 12 2z"/></svg>
+        <a href="#" class="auth-social-btn" aria-label="Sign up with Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#1877F2">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
         </a>
       </div>
 

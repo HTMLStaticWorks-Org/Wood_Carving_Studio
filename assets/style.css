@@ -122,19 +122,20 @@ button, input, textarea, select {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
+  gap: 10px;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.25rem;
   letter-spacing: .3px;
   color: var(--ink);
   white-space: nowrap;
+  flex-shrink: 0;
   justify-self: start;
 }
 
 .brandmark {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -152,8 +153,8 @@ button, input, textarea, select {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
-  font-size: .95rem;
+  gap: 22px;
+  font-size: .92rem;
   font-weight: 600;
   color: var(--muted);
   list-style: none;
@@ -166,6 +167,7 @@ button, input, textarea, select {
   padding: 6px 2px;
   transition: color .2s;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .navlinks a:hover,
@@ -205,6 +207,7 @@ button, input, textarea, select {
   font-size: 1.1rem;
   font-weight: 700;
   transition: .2s ease;
+  flex-shrink: 0;
 }
 
 .iconbtn:hover {
@@ -214,13 +217,17 @@ button, input, textarea, select {
 }
 
 .btn-signin {
-  padding: 9px 20px;
+  padding: 9px 18px;
   font-size: .88rem;
   border-radius: 4px;
   white-space: nowrap;
 }
 
 .menu-toggle {
+  display: none;
+}
+
+.mobile-signin-wrap {
   display: none;
 }
 
@@ -239,6 +246,7 @@ button, input, textarea, select {
   cursor: pointer;
   transition: .2s ease;
   white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .btn:hover {
@@ -304,7 +312,19 @@ p {
   margin: 0 0 18px;
 }
 
-/* Hero Sections - Centered Content with Distinct Backgrounds */
+/* Home 2 Single-line Heading */
+.heading-single-line {
+  white-space: nowrap;
+  font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+}
+
+@media (max-width: 768px) {
+  .heading-single-line {
+    white-space: normal;
+  }
+}
+
+/* Hero Sections - Centered Content with Equal-Sized Action Buttons */
 .hero {
   min-height: 640px;
   display: flex;
@@ -328,7 +348,7 @@ p {
 }
 
 .hero-copy {
-  max-width: 780px;
+  max-width: 800px;
   margin-inline: auto;
   text-align: center;
   display: flex;
@@ -358,13 +378,23 @@ p {
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
 }
 
-.hero-actions {
+/* Hero action buttons - Equal width & height */
+.hero-actions,
+.page-hero-actions {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-top: 28px;
+}
+
+.hero-actions .btn,
+.page-hero-actions .btn {
+  min-width: 200px;
+  height: 48px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .hero .btn,
@@ -440,44 +470,40 @@ p {
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
 }
 
-.page-hero-actions {
-  margin-top: 28px;
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Distinct Wood Carving Photos for Each Page Hero */
-/* 1. Home 1: Hands chiseling wood with shavings */
 .hero-home1 {
   background-image: linear-gradient(rgba(14, 10, 7, 0.82), rgba(14, 10, 7, 0.60)),
                     url('https://images.unsplash.com/photo-1497219055242-93359eeed651?auto=format&fit=crop&w=2000&q=85');
 }
 
-/* 2. Home 2: Close-up chisel sculpting organic wood curves */
 .hero-home2 {
   background-image: linear-gradient(rgba(14, 10, 7, 0.82), rgba(14, 10, 7, 0.60)),
                     url('https://images.unsplash.com/photo-1455297463052-94abc38ba022?auto=format&fit=crop&w=2000&q=85');
 }
 
-/* 3. Gallery: Monumental carved temple sculptures (Sanctuary of Truth) */
+.hero-about {
+  background-image: linear-gradient(rgba(14, 10, 7, 0.82), rgba(14, 10, 7, 0.60)),
+                    url('https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&fit=crop&w=2000&q=85');
+}
+
 .hero-gallery {
   background-image: linear-gradient(rgba(14, 10, 7, 0.82), rgba(14, 10, 7, 0.60)),
                     url('https://images.unsplash.com/photo-1644902617098-45abe72a7445?auto=format&fit=crop&w=2000&q=85');
 }
 
-/* 4. Products: Carver bench with gouges, chips & carved block */
 .hero-products {
   background-image: linear-gradient(rgba(14, 10, 7, 0.82), rgba(14, 10, 7, 0.60)),
                     url('https://images.unsplash.com/photo-1546531537-3884727f20d4?auto=format&fit=crop&w=2000&q=85');
 }
 
-/* 5. Contact: Artisan wood carving studio workshop and bench with tools */
+.hero-custom {
+  background-image: linear-gradient(rgba(14, 10, 7, 0.82), rgba(14, 10, 7, 0.60)),
+                    url('https://images.unsplash.com/photo-1669687769369-383d3d562445?auto=format&fit=crop&w=2000&q=85');
+}
+
 .hero-contact {
   background-image: linear-gradient(rgba(14, 10, 7, 0.82), rgba(14, 10, 7, 0.60)),
-                    url('https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&fit=crop&w=2000&q=85');
+                    url('https://images.unsplash.com/photo-1732544504373-01e2f4a6493f?auto=format&fit=crop&w=2000&q=85');
 }
 
 /* Sections */
@@ -486,7 +512,7 @@ p {
 }
 
 .section-head {
-  max-width: 670px;
+  max-width: 760px;
   margin-bottom: 42px;
 }
 
@@ -520,7 +546,17 @@ p {
   align-items: center;
 }
 
-/* Photos & Cards */
+/* Left aligned actions in Split sections */
+.left-aligned-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 24px;
+}
+
+/* Photos & Reduced Heights */
 .photo {
   border-radius: 6px;
   overflow: hidden;
@@ -532,7 +568,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  min-height: 360px;
+  min-height: 340px;
   transition: transform .4s ease;
 }
 
@@ -540,10 +576,23 @@ p {
   transform: scale(1.02);
 }
 
+.photo-reduced {
+  max-height: 320px;
+  height: 320px;
+  overflow: hidden;
+}
+
+.photo-reduced img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .feature-img {
   height: 440px;
 }
 
+/* Cards */
 .card {
   background: var(--surface);
   border: 1.5px solid var(--line);
@@ -638,6 +687,90 @@ p {
   font-weight: 700;
   font-size: 1.25rem;
   color: var(--brand);
+}
+
+/* Reviews Section */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: 6px;
+  padding: 28px;
+  box-shadow: 0 6px 20px rgba(40, 28, 17, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-stars {
+  color: #d48b48;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.review-text {
+  font-style: italic;
+  font-size: .95rem;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+
+.review-author strong {
+  display: block;
+  color: var(--ink);
+  font-size: .95rem;
+}
+
+.review-author span {
+  font-size: .82rem;
+  color: var(--muted);
+}
+
+/* Hardwood Species Grid */
+.species-card {
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: 6px;
+  padding: 26px;
+  text-align: center;
+}
+
+.species-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: var(--soft);
+  color: var(--brand);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  border: 1px solid var(--line);
+}
+
+.species-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.species-card p {
+  font-size: .9rem;
+  margin-bottom: 12px;
+}
+
+.species-meta {
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--brand);
+  letter-spacing: .5px;
+  text-transform: uppercase;
 }
 
 /* Product Filter Pills */
@@ -735,6 +868,61 @@ p {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   border-right: 1px solid var(--line);
+}
+
+/* FAQ Accordion Section */
+.faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.faq-item {
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color .2s;
+}
+
+.faq-item[open] {
+  border-color: var(--brand);
+}
+
+.faq-summary {
+  padding: 18px 22px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--ink);
+  user-select: none;
+  list-style: none;
+}
+
+.faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-summary::after {
+  content: '+';
+  font-size: 1.4rem;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.faq-item[open] .faq-summary::after {
+  content: '−';
+}
+
+.faq-content {
+  padding: 0 22px 20px;
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1.6;
 }
 
 /* CTA Banner Section */
@@ -874,6 +1062,47 @@ p {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent);
 }
 
+/* Password input with Eye icon */
+.password-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrap input {
+  padding-right: 44px;
+}
+
+body.rtl .password-wrap input {
+  padding-right: 15px;
+  padding-left: 44px;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 6px;
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+  transition: color .2s;
+  user-select: none;
+}
+
+body.rtl .password-toggle-btn {
+  right: auto;
+  left: 12px;
+}
+
+.password-toggle-btn:hover {
+  color: var(--brand);
+}
+
+/* Contact List & Small Location Item */
 .contact-list {
   display: grid;
   gap: 20px;
@@ -901,6 +1130,21 @@ p {
   margin: 4px 0 0;
 }
 
+.contact-item-location .service-icon {
+  width: 44px;
+  height: 44px;
+  font-size: 1.15rem;
+}
+
+.contact-item-location strong {
+  font-size: .95rem;
+}
+
+.contact-item-location p {
+  font-size: .88rem;
+  line-height: 1.45;
+}
+
 .contact-social-wrap {
   margin-top: 24px;
   padding-top: 20px;
@@ -915,12 +1159,21 @@ p {
   filter: grayscale(0.15);
 }
 
-/* Footer */
+/* Footer - Single line brand name guarantee */
 .footer {
   background: #1e1611;
   color: #f4e9df;
   padding: 64px 0 26px;
   border-top: 1px solid #36281f;
+}
+
+.footer .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  color: #ffffff;
 }
 
 .footer p,
@@ -992,7 +1245,42 @@ p {
   text-align: center;
 }
 
-/* Authentication Pages - Strict Clean Centered Card, No Images */
+/* Back to Top Floating Button */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  inset-inline-end: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: var(--btn-ink);
+  border: 1.5px solid var(--line);
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: all .25s ease;
+  z-index: 99;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--brand2);
+  transform: translateY(-3px);
+}
+
+/* Authentication Pages - Strict Clean Centered Card, No Images, Theme/RTL Outside */
 .auth-body {
   min-height: 100vh;
   display: flex;
@@ -1061,22 +1349,21 @@ body.rtl .auth-corner-tools {
   margin: 0;
 }
 
-/* Terms & Conditions Checkbox */
+/* Checkbox & Options */
 .field-checkbox {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   font-size: .88rem;
   color: var(--ink);
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   user-select: none;
 }
 
 .field-checkbox input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  margin-top: 3px;
   accent-color: var(--brand);
   cursor: pointer;
   flex-shrink: 0;
@@ -1144,7 +1431,7 @@ body.rtl .auth-corner-tools {
   padding: 0 12px;
 }
 
-/* Social icons centered properly with NO duplicate/repetitive icons */
+/* Proper Social Icons in Authentication (Google, Apple, Facebook) */
 .auth-socials {
   display: flex;
   justify-content: center;
@@ -1154,8 +1441,8 @@ body.rtl .auth-corner-tools {
 }
 
 .auth-social-btn {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   border: 1.5px solid var(--line);
   background: var(--bg);
   color: var(--ink);
@@ -1231,38 +1518,65 @@ body.rtl .auth-corner-tools {
   direction: rtl;
 }
 
+.rtl .left-aligned-actions {
+  justify-content: flex-start;
+}
+
 /* RESPONSIVE LAYOUTS */
 
-/* 1024px View / Small Desktop & Landscape Tablet */
-@media (max-width: 1040px) {
+/* 1024px View: Navbar centered, no overlapping */
+@media (min-width: 921px) and (max-width: 1100px) {
   .container {
-    width: min(960px, 92%);
-  }
-  .navlinks {
-    gap: 20px;
-    font-size: .91rem;
+    width: min(980px, 94%);
   }
   .navinner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     gap: 12px;
   }
   .brand {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
+    gap: 8px;
+  }
+  .brandmark {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+  .navlinks {
+    justify-self: center;
+    justify-content: center;
+    gap: 14px;
+    font-size: .86rem;
+  }
+  .navtools {
+    gap: 6px;
+  }
+  .btn-signin {
+    padding: 7px 12px;
+    font-size: .82rem;
+  }
+  .iconbtn {
+    width: 36px;
+    height: 36px;
   }
   .footer-grid {
     grid-template-columns: 1.2fr 1fr 1fr 1fr;
-    gap: 28px;
+    gap: 24px;
   }
   .split {
-    gap: 42px;
+    gap: 36px;
   }
 }
 
-/* 768px View / Tablet / iPad View (768px - 920px) */
+/* 768px View / Tablet / iPad View (651px - 920px) */
 @media (max-width: 920px) {
   .navinner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    min-height: 72px;
   }
   .navlinks {
     display: none;
@@ -1277,7 +1591,7 @@ body.rtl .auth-corner-tools {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 18px;
+    gap: 16px;
     text-align: center;
   }
   .navlinks.open {
@@ -1294,7 +1608,19 @@ body.rtl .auth-corner-tools {
     margin-left: 0;
     margin-right: auto;
   }
-  
+  .navtools .btn-signin {
+    display: none; /* Hide from navbar header on mobile to prevent overflow */
+  }
+  .mobile-signin-wrap {
+    display: block;
+    width: 100%;
+    max-width: 240px;
+    margin-top: 8px;
+  }
+  .mobile-signin-wrap .btn {
+    width: 100%;
+  }
+
   /* Alignment at 768px */
   .grid.four {
     grid-template-columns: repeat(2, 1fr);
@@ -1302,6 +1628,25 @@ body.rtl .auth-corner-tools {
   .grid.three {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* 768px: Last card centered in 3-card grids */
+  .grid.three > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 480px;
+    width: 100%;
+    justify-self: center;
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .reviews-grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 500px;
+    justify-self: center;
+    width: 100%;
+  }
+
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
@@ -1311,7 +1656,7 @@ body.rtl .auth-corner-tools {
     gap: 40px;
   }
   .feature-img {
-    height: 380px;
+    height: 360px;
   }
   .gallery-grid {
     columns: 2;
@@ -1333,6 +1678,14 @@ body.rtl .auth-corner-tools {
   .cta-btn {
     align-self: center;
   }
+
+  /* 768px Contact Page: Center buttons */
+  .contact-social-wrap {
+    text-align: center;
+  }
+  .contact-social-wrap .socials {
+    justify-content: center;
+  }
 }
 
 /* Mobile View (max-width: 650px) */
@@ -1344,16 +1697,21 @@ body.rtl .auth-corner-tools {
     gap: 4px;
   }
   .brand {
-    font-size: 1.05rem;
+    font-size: 1.02rem;
+    gap: 7px;
   }
   .brandmark {
-    width: 34px;
-    height: 34px;
-    font-size: 1rem;
+    width: 32px;
+    height: 32px;
+    font-size: .95rem;
   }
-  .btn-signin {
-    padding: 7px 14px;
-    font-size: .82rem;
+  .navtools {
+    gap: 5px;
+  }
+  .iconbtn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
   }
   .hero {
     min-height: 560px;
@@ -1363,12 +1721,13 @@ body.rtl .auth-corner-tools {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    max-width: 360px;
+    max-width: 320px;
     margin-inline: auto;
   }
   .hero-actions .btn,
   .page-hero-actions .btn {
     width: 100%;
+    min-width: unset;
   }
   .section {
     padding: 54px 0;
@@ -1376,15 +1735,23 @@ body.rtl .auth-corner-tools {
   .grid.two,
   .grid.three,
   .grid.four,
-  .split {
+  .split,
+  .reviews-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+  .grid.three > :last-child:nth-child(odd) {
+    max-width: 100%;
   }
   .photo img {
     min-height: 260px;
   }
+  .photo-reduced {
+    height: 260px;
+    max-height: 260px;
+  }
   .feature-img {
-    height: 300px;
+    height: 280px;
   }
   .footer-grid {
     grid-template-columns: 1fr;
@@ -1406,9 +1773,5 @@ body.rtl .auth-corner-tools {
   }
   body.rtl .auth-corner-tools {
     left: 14px;
-  }
-  .iconbtn {
-    width: 36px;
-    height: 36px;
   }
 }
