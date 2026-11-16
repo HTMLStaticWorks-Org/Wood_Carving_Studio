@@ -1655,25 +1655,29 @@ body.rtl .auth-corner-tools {
   }
   .navinner {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
     gap: 12px;
   }
   .brand {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     gap: 8px;
+    justify-self: start;
   }
   .brandmark {
-    width: 34px;
-    height: 34px;
-    font-size: 1rem;
+    width: 32px;
+    height: 32px;
+    font-size: .95rem;
   }
   .navlinks {
     justify-self: center;
     justify-content: center;
-    gap: 14px;
-    font-size: .86rem;
+    margin: 0 auto;
+    gap: 12px;
+    font-size: .84rem;
   }
   .navtools {
+    justify-self: end;
     gap: 6px;
   }
   .btn-signin {
@@ -1797,10 +1801,11 @@ body.rtl .auth-corner-tools {
 
   /* 768px: Last card centered in 3-card grids */
   .grid.three > :last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    max-width: 480px;
-    width: 100%;
-    justify-self: center;
+    grid-column: 1 / -1 !important;
+    max-width: 480px !important;
+    width: 100% !important;
+    margin-inline: auto !important;
+    justify-self: center !important;
   }
 
   .reviews-grid {
@@ -1847,10 +1852,12 @@ body.rtl .auth-corner-tools {
 
   /* 768px Contact Page: Center buttons */
   .contact-social-wrap {
-    text-align: center;
+    text-align: center !important;
   }
   .contact-social-wrap .socials {
-    justify-content: center;
+    display: flex !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
   }
 }
 
@@ -1912,7 +1919,8 @@ body.rtl .auth-corner-tools {
     gap: 20px;
   }
   .grid.three > :last-child:nth-child(odd) {
-    max-width: 100%;
+    max-width: 100% !important;
+    grid-column: auto !important;
   }
   .photo img {
     min-height: 260px;

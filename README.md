@@ -4,7 +4,7 @@ An artisan studio website for **Wood & Grain Studio**, celebrating hand-carved a
 
 ## Pages Overview
 - **Home 1 (`index.html`)**: Atelier showcase, artisan process, architectural reliefs, sustainable hardwood species guide, client reviews/reflections, and Back to Top.
-- **Home 2 (`home2.html`)**: Modern split hero with headline, copy, and equal-sized CTA buttons alongside a featured carving image, single-line philosophy statement, and disciplines.
+- **Home 2 (`home2.html`)**: Centered hero designed similar to Home 1 with background carving imagery, centered headline, copy, and equal-sized CTA buttons, single-line philosophy statement, and disciplines.
 - **About (`about.html`)**: Workshop heritage, master carver team profiles, and workshop tenets.
 - **Gallery (`gallery.html`)**: 12-piece wood carving portfolio with strictly equal card sizes, uniform grid alignment, and permanent institutional installations archive.
 - **Products (`products.html`)**: Handcrafted wood carving catalog, filter pills, left-aligned commission actions, and reduced height imagery.
