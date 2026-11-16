@@ -30,8 +30,12 @@
         <a href="products.html">Products</a>
         <a href="custom.html">Custom</a>
         <a class="active" href="contact.html">Contact</a>
-        <div class="mobile-signin-wrap">
-          <a class="btn btn-sm" href="login.html">Sign in</a>
+        <div class="mobile-drawer-tools">
+          <div class="mobile-drawer-actions">
+            <button class="iconbtn" data-rtl-toggle aria-label="Toggle RTL" title="Toggle RTL">⇄</button>
+            <button class="iconbtn" data-theme-toggle aria-label="Toggle theme" title="Toggle theme">◐</button>
+          </div>
+          <a class="btn btn-sm btn-signin-mobile" href="login.html">Sign in</a>
         </div>
       </nav>
       <div class="navtools">
@@ -64,12 +68,12 @@
           <p>Tell us what you’re imagining. A rough sketch, a reference photo, architectural blueprints or a few words are a perfect place to begin.</p>
 
           <div class="contact-list">
-            <!-- Compact Studio Location (Issue 10) -->
+            <!-- Compact Studio Location in one line -->
             <div class="contact-item contact-item-location">
               <div class="service-icon">⌖</div>
               <div>
                 <strong>Studio location</strong>
-                <p>Chennai, Tamil Nadu, India<br>Visits by prior appointment</p>
+                <p class="single-line-location">Chennai, Tamil Nadu, India — Visits by prior appointment</p>
               </div>
             </div>
             <div class="contact-item">
@@ -106,10 +110,10 @@
           </div>
         </div>
 
-        <!-- Form Heading changed to Studio Enquiry Form (Issue 11) -->
+        <!-- Form Heading changed to Enquiry Form -->
         <form class="form-card" data-demo-form>
           <span class="eyebrow">Studio Inquiries</span>
-          <h3 style="margin-bottom:8px">Studio Enquiry Form</h3>
+          <h3 style="margin-bottom:8px">Enquiry Form</h3>
           <p>We review every commission request and respond within two working days.</p>
           <div class="field">
             <label>Your full name</label>
